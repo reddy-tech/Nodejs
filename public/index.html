@@ -3,27 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Smart Property Scout</title>
 </head>
-<body>
-    <h1> Smart Property Scout </h1>
-    <p> This is the website where you can find the property details</p><fieldset>
 
-    <p> About Page <a href="/about"> About Page</a></p>
-    <p> here is my data <a href="/api"> Data is here</a></p>
-    </fieldset>
+   
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Smart Property Scout</div>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu" id="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/api">Data</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <div class="card">
+            <h1>Smart Property Scout</h1>
+            <p>Welcome to Smart Property Scout - your ultimate destination for finding the perfect property. Explore our listings, check property details, and make informed decisions for your real estate investments.</p>
+            
+            <fieldset>
+                <p>Learn more about us: <a href="/about" class="btn">About Page</a></p>
+                <p>View our property data: <a href="/api" class="btn">Property Data</a></p>
+            </fieldset>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Smart Property Scout. All rights reserved.</p>
+        </div>
+    </footer>
+    </body>
+    
     <style>
         body {
-            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
             color: #333;
         }
+        
+        /* Header styles */
+        header {
+            background-color: #3a6ea5;
+            color: #fff;
+            padding: 1rem;
+            position: relative;
+        }
+        
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        /* Navigation styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .menu {
+            list-style: none;
+            display: flex;
+        }
+        
+        .menu li {
+            padding: 0 1rem;
+        }
+        
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .menu a:hover {
+            color: #ffcc00;
+        }
+        
+        /* Hamburger menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            background: #fff;
+            transition: all 0.3s ease;
+        }
+        
+        /* Main content styles */
+        .main-content {
+            padding: 2rem 0;
+        }
+        
+        .card {
+            background: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
         h1 {
+            color: #3a6ea5;
+            margin-bottom: 1rem;
             text-align: center;
-            margin-top: 50px;
         }
+        
         p {
-            text-align: center;
-            font-size: 20px;
+            margin-bottom: 1rem;
         }
-</body>
+        
+        .btn {
+            display: inline-block;
+            background: #3a6ea5;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            text-decoration: none;
+            font-size: 1rem;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: #2d5982;
+        }
+        
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 5px;
+        }
+        
+        /* Footer styles */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #3a6ea5;
+                padding: 1rem 0;
+                z-index: 1;
+            }
+            
+            .menu.active {
+                display: flex;
+            }
+            
+            .menu li {
+                padding: 0.5rem 1rem;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            /* Hamburger animation */
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+    </style>
+ 
+
+    <script>
+        // Simple hamburger menu functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const menu = document.getElementById('menu');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                menu.classList.toggle('active');
+            });
+        });
+    </script>
+
+</html>
