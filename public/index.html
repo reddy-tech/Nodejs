@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yashwanth Reddy - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
         <nav id="navigation">
+            <div class="hamburger">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -131,7 +132,7 @@
 
     </main>
 
-    <section id="footer">
+    <footer>
         <ul>
             <li>
                <a href="https://github.com/reddy">
@@ -145,292 +146,14 @@
             </li>
             <li>
                 <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" , alt="facebook">
-
+            </li>
          </ul>
-    </section>
+    </footer>
 
-    <style>
-
-body {
-    font-family: Arial, sans-serif;
-    margin:2px;
-    padding: 0;
-    line-height: 1.6;
-    background-color:#E3F2FD;
-
-}
-
-
-li
-{
-    display: inline;
-    margin: 5px;
-
-
-}
-header
-{
-    background-color: lightgray;
-    border-radius: 5px;
-    border: 2px solid gray;
-    margin-left:10px;
-    margin-right: 10px;
-    margin-top: 5px;
-    position: relative; /* Added for hamburger positioning */
-}
-
-#navigation a
-{
-    color:white;
-    border-radius: 5px;
-    border:0.5px solid #888;
-    background-color: #333;
-    text-decoration: none;
-    padding: 3px;
-}
-ul
-{
-    text-align: center;
-}
-
-
-img
-{
-    width:250px;
-    height:250px;
-    
-}
-
-h1{
-    color: black;
-    margin:0%;
-}
-h4{
-    margin-left:20px;
-}
-#footer img{
-    height: 40px;
-    width: 40px;
-}
-#footer li{
-    margin-right: 20px;
-}
-#footer a{
-    text-decoration: none;
-    
-}
-
-main{
-    display: grid;
-    grid-template-areas: 
-          
-          "picture about"
-          "skills skills"
-          "projects projects"
-          "experience Education_info"
-          "footer footer";
-    gap: 20px;
-}
-#skills
-{
-    width: 100%;
-    background-color:#E0E0E0;
-}
-p{
-    color: black;
-}
-#experience,#Education_info
-{
-    margin-top: 10px;
-    margin-left: 10px;
-    border: 2px solid gray;
-    border-radius: 10px;
-    padding: 10px;
-}
-#projects
-{
-    grid-area: projects;
-}
-#skills
-{
-    grid-area: skills;
-    border: 2px solid gray;
-    width: 98%;
-    border-radius: 10px;
-    margin-left: 10px;
-}
-#experience
-{
-    grid-area: experience;
-    background-color: #E0E0E0;
-}
-#Education_info
-{
-    grid-area: Education_info;
-    background-color: #E0E0E0;
-}
-#inner
-{
-    border: 2px solid gray;
-    border-radius: 10px;
-    width: 22%;
-    float: left;
-    margin-right: 10px;
-    padding: 5px;
-    text-align: center;
-    margin-left: 10px;
-    background-color: #E0E0E0;
-}
-#about
-{
-    background-color: #E0E0E0;
-    border: 2px solid grey;
-    border-radius: 10px;
-    margin-top: 10px;
-    width:98%
-}
-#picture
-{
-    margin-top:10px;
-    margin-left: 10px;
-}
-
-/* Hamburger Menu Styles */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    z-index: 1000;
-}
-
-.hamburger span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    margin-bottom: 5px;
-    background-color: #333;
-    border-radius: 3px;
-}
-
-@media(max-width: 500px)
-{
-    main
-    {
-        display: grid;
-        grid-template-areas: 
-        "picture"
-        "about"
-        "skills"
-        "projects"
-        "experience"
-        "Education_info"
-        "footer"
-    }
-    
-    /* Show hamburger button on mobile */
-    .hamburger {
-        display: block;
-    }
-    
-    /* Hide navigation by default on mobile */
-    #navigation {
-        display: none;
-        width: 100%;
-        padding-top: 50px;
-    }
-    
-    /* When navigation is active */
-    #navigation.active {
-        display: block;
-    }
-    
-    /* Stack menu items vertically on mobile */
-    #navigation ul {
-        flex-direction: column;
-    }
-    
-    #navigation li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    #picture
-    {
-        grid-area: picture;
-        text-align: center;
-        width: 95%;
-        margin-left: 10px;
-        margin-top: 10px;
-        border: none;
-    }
-    #about
-    {
-        grid-area: about;
-        border: 2px solid gray;
-        border-radius: 10px;
-        width: 95%;
-        margin-left: 10px;
-        text-align: center;
-        background-color: #E0E0E0;
-    }
-    #skills
-    {
-        grid-area: skills;
-        border: 2px solid gray;
-        border-radius: 10px;
-        width: 95%;
-        margin-left: 10px;
-        text-align: center;
-        background-color: #E0E0E0;
-    }
-    #projects
-    {
-        grid-area: projects;
-        margin-left: 10px;
-    }
-    #experience
-    {
-        grid-area: experience;
-        background-color: #E0E0E0;
-    }
-    #Education_info
-    {
-        grid-area: Education_info;
-        background-color: #E0E0E0;
-
-    }
-    #footer
-    {
-        grid-area: footer;
-        background-color: grey;
-    }
-    #inner
-    {
-        width: 95%;
-        border: 2px solid gray;
-        border-radius: 10px;
-        width: 95%;
-        padding: 5px;
-        text-align: center;
-        margin-top: 10px;
-        background-color: #E0E0E0;
-
-    }
-}
-
-</style>
-
-<script>
-    // Simple JavaScript for hamburger menu
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('hamburger').addEventListener('click', function() {
-            document.getElementById('navigation').classList.toggle('active');
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('#navigation ul').classList.toggle('active');
         });
-    });
-</script>
-
+    </script>
 </body>
 </html>
