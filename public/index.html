@@ -149,6 +149,263 @@
             </li>
          </ul>
     </footer>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin:2px;
+    padding: 0;
+    line-height: 1.6;
+    background-color:#E3F2FD;
+}
+
+li {
+    display: inline;
+    margin: 5px;
+}
+
+header {
+    background-color: lightgray;
+    border-radius: 5px;
+    border: 2px solid gray;
+    margin-left:10px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+#navigation a {
+    color:white;
+    border-radius: 5px;
+    border:0.5px solid #888;
+    background-color: #333;
+    text-decoration: none;
+    padding: 3px;
+}
+
+ul {
+    text-align: center;
+}
+
+img {
+    width:250px;
+    height:250px;  
+}
+
+h1 {
+    color: black;
+    margin:0%;
+}
+
+h4 {
+    margin-left:20px;
+}
+
+footer img {
+    height: 40px;
+    width: 40px;
+}
+
+footer li {
+    margin-right: 20px;
+}
+
+footer a {
+    text-decoration: none;  
+}
+
+main {
+    display: grid;
+    grid-template-areas: 
+          "picture about"
+          "skills skills"
+          "projects projects"
+          "experience Education_info"
+          "footer footer";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 20px;
+}
+
+#skills {
+    width: 100%;
+    background-color:#E0E0E0;
+}
+
+p {
+    color: black;
+}
+
+#experience, #Education_info {
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#projects {
+    grid-area: projects;
+}
+
+#skills {
+    grid-area: skills;
+    border: 2px solid gray;
+    width: 98%;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+#experience {
+    grid-area: experience;
+    background-color: #E0E0E0;
+}
+
+#Education_info {
+    grid-area: Education_info;
+    background-color: #E0E0E0;
+}
+
+#inner {
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 22%;
+    float: left;
+    margin-right: 10px;
+    padding: 5px;
+    text-align: center;
+    margin-left: 10px;
+    background-color: #E0E0E0;
+}
+
+#about {
+    background-color: #E0E0E0;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin-top: 10px;
+    width:98%
+}
+
+#picture {
+    margin-top:10px;
+    margin-left: 10px;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    text-align: right;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+@media(max-width: 500px) {
+    .hamburger {
+        display: block;
+    }
+    
+    #navigation ul {
+        display: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #navigation ul.active {
+        display: block;
+    }
+    
+    #navigation li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    #navigation a {
+        display: inline-block;
+        width: 80%;
+        padding: 8px;
+    }
+    
+    main {
+        display: grid;
+        grid-template-areas: 
+        "picture"
+        "about"
+        "skills"
+        "projects"
+        "experience"
+        "Education_info"
+        "footer";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto;
+    }
+
+    #picture {
+        grid-area: picture;
+        text-align: center;
+        width: 95%;
+        margin-left: 10px;
+        margin-top: 10px;
+        border: none;
+    }
+    
+    #about {
+        grid-area: about;
+        border: 2px solid gray;
+        border-radius: 10px;
+        width: 95%;
+        margin-left: 10px;
+        text-align: center;
+        background-color: #E0E0E0;
+    }
+    
+    #skills {
+        grid-area: skills;
+        border: 2px solid gray;
+        border-radius: 10px;
+        width: 95%;
+        margin-left: 10px;
+        text-align: center;
+        background-color: #E0E0E0;
+    }
+    
+    #projects {
+        grid-area: projects;
+        margin-left: 10px;
+    }
+    
+    #experience {
+        grid-area: experience;
+        background-color: #E0E0E0;
+    }
+    
+    #Education_info {
+        grid-area: Education_info;
+        background-color: #E0E0E0;
+    }
+    
+    footer {
+        grid-area: footer;
+        background-color: grey;
+    }
+    
+    #inner {
+        width: 95%;
+        border: 2px solid gray;
+        border-radius: 10px;
+        padding: 5px;
+        text-align: center;
+        margin-top: 10px;
+        background-color: #E0E0E0;
+    }
+}
+    </style>
 
     <script>
         document.querySelector('.hamburger').addEventListener('click', function() {
